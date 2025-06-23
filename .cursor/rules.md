@@ -14,6 +14,14 @@
    - Always read `project_memory.md` before starting
    - Document all solutions and lessons learned
    - Maintain comprehensive project context
+   
+   **🔄 AUTOMATIC MEMORY UPDATE TRIGGERS:**
+   - ✅ After solving any problem → Update MASALAH & SOLUSI section
+   - ✅ After changing specifications → Update SPESIFIKASI & RULES section
+   - ✅ After learning new lessons → Update LESSONS LEARNED section
+   - ✅ After file status changes → Update ACTIVE FILES section
+   - ✅ Before session end → Update Last Updated date and status
+   - ✅ After deployment → Update Implementation Status section
 
 2. **SYSTEMATIC QUALITY ASSURANCE**
    - Test at multiple levels (unit, integration, frontend)
@@ -323,11 +331,21 @@ function calculateTotalPrice(basePrice, taxRate, discount) {
 
 ## 🎯 **DEPLOYMENT RULES**
 
+### **MEMORY UPDATE VALIDATION CHECKLIST:**
+- [ ] Problem section updated with new issues solved
+- [ ] File status lists reflect current state
+- [ ] Lessons learned section has new insights
+- [ ] Last Updated date is current
+- [ ] Cross-references are working correctly
+- [ ] Templates properly filled out with real data
+- [ ] Session state reflects current progress
+
 ### **DEPLOYMENT CHECKLIST:**
 - [ ] All tests passing (unit, integration, E2E)
 - [ ] Performance benchmarks met
 - [ ] Security scan completed
 - [ ] Documentation updated
+- [ ] **project_memory.md updated and validated**
 - [ ] Backup procedures verified
 - [ ] Rollback plan prepared
 - [ ] Monitoring configured

@@ -1,5 +1,5 @@
 {
-  "cursor.aiInstructions": "Always read and follow the comprehensive development system defined in .cursor/cursor_mdc.md. Before any development work, load project context from project_memory.md and follow the systematic approach outlined in ai_comprehensive_sop_system.md. Never skip the mandatory testing phases (unit, integration, frontend) and always update project memory after completing tasks.",
+  "cursor.aiInstructions": "🎯 MEMORY-FIRST DEVELOPMENT: Always read project_memory.md FIRST before any work. 🔄 AUTOMATIC MEMORY UPDATES: After completing ANY task, IMMEDIATELY update project_memory.md with: new problems solved, rules changed, lessons learned, file status updates. Use templates from ai_comprehensive_sop_system.md. ✅ VALIDATION: Before ending session, verify memory is updated with current date and all changes. 📋 RECOVERY: Check session_state.json for interrupted work. Follow .cursor/cursor_mdc.md and ai_comprehensive_sop_system.md for complete workflow.",
   
   "cursor.includeDocs": [
     ".cursor/cursor_mdc.md",
