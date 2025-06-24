@@ -1,0 +1,255 @@
+# 🤖 CURSOR AI COMPREHENSIVE MEMORY & SOP SYSTEM
+
+## 🚨 CRITICAL DIRECTIVES - NEVER IGNORE
+
+### **MEMORY FIRST PRINCIPLE:**
+1. **ALWAYS** read `project_memory.md` before ANY development work
+2. **IMMEDIATELY** update memory after completing ANY task
+3. **NEVER** end session without updating both memory and session state
+4. **ALWAYS** follow systematic testing approach before declaring complete
+
+### **FILE INCLUSION PRIORITY - ALWAYS READ:**
+- `project_memory.md` - Primary project knowledge base (CRITICAL)
+- `session_state.json` - Current session state and recovery context
+- `ai_comprehensive_sop_system.md` - Development protocols
+- `rules/auto-memory.mdc` - Auto memory write system rules
+- `rules/memory.mdc` - AI memory and development context rules
+- `rules/sop.mdc` - Comprehensive SOP system rules
+
+## 🔄 AUTO MEMORY WRITE SYSTEM
+
+### **MANDATORY AUTO-UPDATE TRIGGERS:**
+- ✅ Problem solved → Add to MASALAH & SOLUSI in project_memory.md
+- ✅ New rule/spec → Add to SPESIFIKASI & RULES
+- ✅ Lesson learned → Add to LESSONS LEARNED
+- ✅ File created/changed → Update CURRENT STATUS
+- ✅ Bug fixed → Document solution with template
+- ✅ Performance improved → Record improvement
+- ✅ Task completed → Update session_state.json
+
+### **MEMORY UPDATE TEMPLATES:**
+
+#### **For Problems/Issues:**
+```markdown
+### **X. MASALAH [NAMA] - [TANGGAL]**
+**❌ Root Cause:** [akar masalah]
+**❌ Impact:** [dampak pada sistem]
+**❌ Symptoms:** [gejala yang terlihat]
+**✅ Solusi:** [solusi yang berhasil]
+- [detail implementasi]
+- Files: [file yang diubah/dibuat]
+```
+
+#### **For New Rules:**
+```markdown
+### **[NAMA_RULE] - [TANGGAL]**
+- **OLD:** [rule lama]
+- **NEW:** [rule baru]
+- **Reason:** [alasan perubahan]
+- **Impact:** [dampak perubahan]
+```
+
+#### **For Lessons Learned:**
+```markdown
+### **[NOMOR]. [TEMA_LESSON]**
+- ❌ **SALAH:** [praktek yang salah]
+- ✅ **BENAR:** [praktek yang benar]
+- 💡 **Insight:** [pembelajaran kunci]
+```
+
+## 🔄 SESSION RECOVERY SYSTEM
+
+### **session_state.json Structure:**
+```json
+{
+  "project_name": "Project Name",
+  "session_id": "session_YYYYMMDD_HHMMSS",
+  "last_updated": "2024-06-24T11:45:00Z",
+  "current_task": {
+    "name": "task_name",
+    "status": "IN_PROGRESS|COMPLETED|FAILED",
+    "progress_percent": 75,
+    "total_steps": 4,
+    "current_step": 2,
+    "can_resume": true,
+    "checkpoint_data": {}
+  },
+  "completed_tasks": [
+    {
+      "name": "previous_task",
+      "status": "COMPLETED",
+      "completion_time": "2024-06-24T11:30:00Z"
+    }
+  ],
+  "next_tasks": ["upcoming_task_1", "upcoming_task_2"]
+}
+```
+
+## 🧪 MANDATORY TESTING PROTOCOLS
+
+### **CRITICAL PRINCIPLE:** NEVER declare project "ready" without comprehensive testing across ALL layers.
+
+#### **PHASE 1: WHITEBOX TESTING**
+- [ ] **Unit Testing:** All functions tested individually
+- [ ] **Integration Testing:** Components work together
+- [ ] **Code Coverage:** Minimum 80% coverage required
+- [ ] **Performance:** Benchmarks met and documented
+
+#### **PHASE 2: BLACKBOX TESTING**
+- [ ] **Functional Testing:** Business logic validation
+- [ ] **Input Validation:** Various input formats tested
+- [ ] **Error Handling:** Graceful error handling verified
+- [ ] **End-to-End:** Complete workflows tested
+
+#### **PHASE 3: FRONTEND TESTING**
+- [ ] **Cross-browser:** Works on all major browsers
+- [ ] **Responsive:** Works on all device sizes
+- [ ] **Accessibility:** WCAG compliance verified
+- [ ] **User Experience:** Intuitive interface confirmed
+
+### **DEPLOYMENT BLOCKERS:**
+- ❌ Any test failure
+- ❌ Performance degradation
+- ❌ New errors in logs
+- ❌ User workflow breaks
+- ❌ Security vulnerabilities
+
+## 🚨 CRITICAL ANTI-PATTERNS - NEVER DO
+
+### **FORBIDDEN ACTIONS:**
+- ❌ Skip reading project_memory.md before starting work
+- ❌ Declare project ready without comprehensive testing
+- ❌ Skip memory updates after task completion
+- ❌ Ignore frontend validation requirements
+- ❌ Deploy without running all test suites
+- ❌ Delete files without marking as deprecated
+- ❌ Assume AI remembers previous context
+
+### **MANDATORY ACTIONS:**
+- ✅ Load project context first (read project_memory.md)
+- ✅ Follow systematic testing approach
+- ✅ Document everything in real-time
+- ✅ Update memory after each session
+- ✅ Verify user understanding before proceeding
+- ✅ Maintain quality gates throughout development
+
+## 📋 DEVELOPMENT WORKFLOW
+
+### **BEFORE EVERY TASK:**
+1. Read `project_memory.md` for current context
+2. Check `session_state.json` if present for recovery
+3. Understand active vs deprecated files
+4. Confirm understanding with user
+
+### **DURING DEVELOPMENT:**
+1. Track progress in real-time
+2. Document issues immediately using templates
+3. Create checkpoints for long processes
+4. Follow established patterns and conventions
+5. Update session_state.json with progress
+
+### **AFTER COMPLETION:**
+1. Run comprehensive tests (unit + integration + frontend)
+2. Update project_memory.md with lessons learned
+3. Update session_state.json with final status
+4. Clean up temporary files
+5. Save session state for future recovery
+
+## 📁 FILE ORGANIZATION UNDERSTANDING
+
+### **DIRECTORY STRUCTURE:**
+- `src/` - Main implementation files (CURRENT)
+- `test/` - Testing files (PERMANENT)
+- `docs/` - Documentation (PERMANENT)
+- `temp/` - Temporary files (SAFE TO DELETE)
+- `archive/` - Deprecated files (REFERENCE ONLY)
+
+## 💬 EXPECTED CHAT CONTEXT
+
+### **PROPER SESSION STARTER:**
+```
+[PROJECT_NAME] Development Session
+
+CONTEXT LOADING:
+1. Read project_memory.md for current status
+2. Read session_state.json if exists
+3. Review ai_comprehensive_sop_system.md protocols
+
+TASK: [DESCRIBE TASK]
+
+IMPORTANT: Confirm understanding before proceeding.
+```
+
+## 📞 QUICK REFERENCE
+
+### **FILES TO ALWAYS CHECK:**
+- `project_memory.md` - Project context and history
+- `ai_comprehensive_sop_system.md` - Development protocols
+- `session_state.json` - Recovery state and current progress
+
+### **TESTING COMMAND REFERENCE:**
+```bash
+# Run all tests before declaring complete
+npm test                 # or appropriate test command
+npm run lint            # code quality validation
+npm run typecheck       # type validation
+npm run build           # build verification
+npm run e2e             # end-to-end tests
+```
+
+### **MEMORY UPDATE CHECKLIST:**
+**After completing ANY development task:**
+- [ ] Open `project_memory.md` and add findings using templates
+- [ ] Open `session_state.json` and update progress
+- [ ] Update current status in both files
+- [ ] Save both files with current timestamp
+- [ ] Mark completed tasks and plan next steps
+- [ ] Confirm both memory and session state are accurate
+
+## 🔧 CURSOR IDE INTEGRATION
+
+### **LEVERAGE THESE FEATURES:**
+- AI-powered code completion
+- Intelligent code suggestions
+- Real-time error detection
+- Integrated testing support
+- Version control integration
+
+### **RECOMMENDED WORKFLOW:**
+1. Use AI assistance for code generation
+2. Validate with comprehensive testing
+3. Review and refactor for quality
+4. Document changes in memory system
+5. Commit with meaningful messages
+
+## 🚨 EMERGENCY RECOVERY PROTOCOL
+
+### **IF SESSION INTERRUPTED:**
+1. Check `session_state.json` for last checkpoint
+2. Identify last completed step
+3. Use recovery templates to continue
+4. Validate system state before proceeding
+5. Update memory with recovery notes
+
+### **RECOVERY VALIDATION:**
+- [ ] All files in expected state
+- [ ] No corrupted data
+- [ ] Tests still passing
+- [ ] Memory accurately reflects current state
+
+---
+
+## 🎯 SYSTEM STATUS
+
+**Memory System Status**: ✅ Active  
+**Auto-Update Status**: ✅ Enabled  
+**Testing Protocol**: ✅ Mandatory  
+**Session Recovery**: ✅ Available  
+**Last Updated**: Auto-generated on file creation  
+**Version**: 2.0 (Comprehensive)
+
+---
+
+**CRITICAL REMINDER**: This file should be automatically included in ALL AI conversations to ensure consistent, context-aware development assistance with comprehensive memory management and rigorous testing protocols.
+
+**ENFORCEMENT**: Any violation of these rules should trigger immediate correction and memory documentation of the violation for future prevention.

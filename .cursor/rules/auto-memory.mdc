@@ -1,0 +1,110 @@
+---
+description: Auto Memory Write System
+globs: ["**/*"]
+alwaysApply: true
+priority: high
+---
+
+# 🔄 AUTO MEMORY WRITE SYSTEM
+
+## 🎯 CRITICAL AUTO-UPDATE RULES
+
+### **MANDATORY AFTER EVERY TASK:**
+1. **IMMEDIATELY** update `project_memory.md` after completing ANY task
+2. **IMMEDIATELY** update `session_state.json` with progress
+3. **NEVER** end session without both memory and session updates
+4. **ALWAYS** use templates for consistency
+
+### **AUTO-UPDATE TRIGGERS:**
+
+#### **For project_memory.md:**
+- ✅ Problem solved → Add to MASALAH & SOLUSI
+- ✅ New rule/spec → Add to SPESIFIKASI & RULES  
+- ✅ Lesson learned → Add to LESSONS LEARNED
+- ✅ File created/changed → Update CURRENT STATUS
+- ✅ Bug fixed → Document solution
+- ✅ Performance improved → Record improvement
+
+#### **For session_state.json:**
+- ✅ Task started → Mark as IN_PROGRESS
+- ✅ Step completed → Update step status and progress
+- ✅ Task finished → Mark as COMPLETED
+- ✅ Error encountered → Document checkpoint for recovery
+- ✅ Session ending → Save final state
+
+## 📝 MEMORY UPDATE TEMPLATES
+
+### **For Problems/Issues:**
+```markdown
+### **X. MASALAH [NAMA] - [TANGGAL]**
+**❌ Root Cause:** [akar masalah]
+**❌ Impact:** [dampak pada sistem]
+**❌ Symptoms:** [gejala yang terlihat]
+**✅ Solusi:** [solusi yang berhasil]
+- [detail implementasi]
+- Files: [file yang diubah/dibuat]
+```
+
+### **For New Rules:**
+```markdown
+### **[NAMA_RULE] - [TANGGAL]**
+- **OLD:** [rule lama]
+- **NEW:** [rule baru]
+- **Reason:** [alasan perubahan]
+- **Impact:** [dampak perubahan]
+```
+
+### **For Lessons Learned:**
+```markdown
+### **[NOMOR]. [TEMA_LESSON]**
+- ❌ **SALAH:** [praktek yang salah]
+- ✅ **BENAR:** [praktek yang benar]
+- 💡 **Insight:** [pembelajaran kunci]
+```
+
+## 🚨 CRITICAL ENFORCEMENT
+
+### **NEVER DO:**
+- ❌ End session without updating memory
+- ❌ Skip documenting solutions that worked
+- ❌ Forget to update current status
+- ❌ Leave lessons learned undocumented
+
+### **ALWAYS DO:**
+- ✅ Update memory IMMEDIATELY after task completion
+- ✅ Use proper templates for consistency
+- ✅ Include current date in updates
+- ✅ Cross-reference with existing memory
+
+### **For Session State:**
+```json
+{
+  "project_name": "itin",
+  "session_id": "session_YYYYMMDD_HHMMSS",
+  "last_updated": "2024-06-24T11:45:00Z",
+  "current_task": {
+    "name": "task_name",
+    "status": "IN_PROGRESS|COMPLETED|FAILED",
+    "progress_percent": 75,
+    "can_resume": true
+  },
+  "completed_tasks": [
+    {
+      "name": "previous_task",
+      "status": "COMPLETED", 
+      "completion_time": "2024-06-24T11:30:00Z"
+    }
+  ],
+  "next_tasks": ["upcoming_task_1", "upcoming_task_2"]
+}
+```
+
+## 📋 AUTO-UPDATE CHECKLIST
+
+**After completing ANY development task:**
+- [ ] Open `project_memory.md` and add findings using templates
+- [ ] Open `session_state.json` and update progress
+- [ ] Update current status in both files
+- [ ] Save both files with current timestamp
+- [ ] Mark completed tasks and plan next steps
+- [ ] Confirm both memory and session state are accurate

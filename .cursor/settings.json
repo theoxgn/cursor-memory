@@ -1,13 +1,11 @@
 {
-  "cursor.aiInstructions": "🎯 MEMORY-FIRST DEVELOPMENT: Always read project_memory.md FIRST before any work. 🔄 AUTOMATIC MEMORY UPDATES: After completing ANY task, IMMEDIATELY update project_memory.md with: new problems solved, rules changed, lessons learned, file status updates. Use templates from ai_comprehensive_sop_system.md. ✅ VALIDATION: Before ending session, verify memory is updated with current date and all changes. 📋 RECOVERY: Check session_state.json for interrupted work. Follow .cursor/cursor_mdc.md and ai_comprehensive_sop_system.md for complete workflow.",
-  
   "cursor.includeDocs": [
-    ".cursor/cursor_mdc.md",
-    ".cursor/rules.md", 
-    ".cursor/project_templates.md",
-    ".cursor/project_memory_template.md",
-    ".cursor/ai_comprehensive_sop_system.md",
-    ".cursor/session_state_template.json"
+    ".cursorrules",
+    "project_memory.md",
+    "session_state.json",
+    "rules/auto-memory.mdc",
+    "rules/memory.mdc",
+    "rules/sop.mdc"
   ],
 
   "cursor.autoSuggest": true,
@@ -20,9 +18,10 @@
   },
 
   "files.associations": {
+    ".cursorrules": "markdown",
     "project_memory.md": "markdown",
-    "ai_comprehensive_sop_system.md": "markdown",
-    "session_state_template.json": "json"
+    "session_state.json": "json",
+    "*.mdc": "markdown"
   },
 
   "editor.rulers": [80, 120],
@@ -52,6 +51,7 @@
   
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
+    ".cursorrules": "project_memory.md, session_state.json",
     "project_memory.md": "session_state.json",
     "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
