@@ -5,7 +5,8 @@
     "session_state.json",
     "rules/auto-memory.mdc",
     "rules/memory.mdc",
-    "rules/sop.mdc"
+    "rules/sop.mdc", 
+    "rules/backend_rules.mdc"
   ],
 
   "cursor.autoSuggest": true,
