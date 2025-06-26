@@ -12,6 +12,7 @@
 - `project_memory.md` - Primary project knowledge base (CRITICAL)
 - `session_state.json` - Current session state and recovery context
 - `ai_comprehensive_sop_system.md` - Development protocols
+- `.cursor/rules/backend_rules.mdc` - Backend development rules (MANDATORY)
 - `rules/auto-memory.mdc` - Auto memory write system rules
 - `rules/memory.mdc` - AI memory and development context rules
 - `rules/sop.mdc` - Comprehensive SOP system rules
@@ -118,15 +119,19 @@
 
 ### **FORBIDDEN ACTIONS:**
 - ❌ Skip reading project_memory.md before starting work
+- ❌ Skip reading .cursor/rules/backend_rules.mdc for backend tasks
 - ❌ Declare project ready without comprehensive testing
 - ❌ Skip memory updates after task completion
 - ❌ Ignore frontend validation requirements
 - ❌ Deploy without running all test suites
 - ❌ Delete files without marking as deprecated
 - ❌ Assume AI remembers previous context
+- ❌ Violate backend development standards and conventions
 
 ### **MANDATORY ACTIONS:**
 - ✅ Load project context first (read project_memory.md)
+- ✅ **ALWAYS** read .cursor/rules/backend_rules.mdc for backend development
+- ✅ Follow backend development standards and conventions strictly
 - ✅ Follow systematic testing approach
 - ✅ Document everything in real-time
 - ✅ Update memory after each session
@@ -138,8 +143,9 @@
 ### **BEFORE EVERY TASK:**
 1. Read `project_memory.md` for current context
 2. Check `session_state.json` if present for recovery
-3. Understand active vs deprecated files
-4. Confirm understanding with user
+3. **MANDATORY**: Read `.cursor/rules/backend_rules.mdc` for backend development standards
+4. Understand active vs deprecated files
+5. Confirm understanding with user
 
 ### **DURING DEVELOPMENT:**
 1. Track progress in real-time
@@ -184,6 +190,7 @@ IMPORTANT: Confirm understanding before proceeding.
 
 ### **FILES TO ALWAYS CHECK:**
 - `project_memory.md` - Project context and history
+- `.cursor/rules/backend_rules.mdc` - Backend development standards (MANDATORY)
 - `ai_comprehensive_sop_system.md` - Development protocols
 - `session_state.json` - Recovery state and current progress
 
@@ -253,3 +260,39 @@ npm run e2e             # end-to-end tests
 **CRITICAL REMINDER**: This file should be automatically included in ALL AI conversations to ensure consistent, context-aware development assistance with comprehensive memory management and rigorous testing protocols.
 
 **ENFORCEMENT**: Any violation of these rules should trigger immediate correction and memory documentation of the violation for future prevention.
+
+---
+
+## 🔧 BACKEND DEVELOPMENT INTEGRATION
+
+### **MANDATORY BACKEND RULES ENFORCEMENT:**
+- **CRITICAL**: `.cursor/rules/backend_rules.mdc` MUST be read for ALL backend development tasks
+- **ENFORCEMENT**: Any backend code that violates these rules must be immediately corrected
+- **SCOPE**: Applies to all Node.js/Express, API, database, and server-side development
+
+### **BACKEND TASK IDENTIFICATION:**
+Backend tasks include but not limited to:
+- API endpoint development
+- Database model creation/modification
+- Service layer implementation
+- Authentication/authorization
+- Validation middleware
+- Controller implementation
+- Route configuration
+- Database migrations
+- Server configuration
+
+### **INTEGRATION WORKFLOW:**
+1. **Task Recognition**: Identify if task involves backend development
+2. **Rules Loading**: Immediately read `.cursor/rules/backend_rules.mdc`
+3. **Standards Application**: Apply all conventions and patterns
+4. **Quality Verification**: Ensure code follows naming conventions, structure patterns, and best practices
+5. **Documentation**: Update project memory with any deviations or learnings
+
+---
+
+{
+  "rules": [
+    ".cursor/rules/backend_rules.mdc"
+  ]
+}
