@@ -1,0 +1,13 @@
+{
+  "project_name": "Your Project",
+  "session_id": "",
+  "last_updated": "",
+  "current_task": {
+    "name": "",
+    "status": "READY",
+    "progress_percent": 0,
+    "can_resume": false
+  },
+  "completed_tasks": [],
+  "next_tasks": []
+}

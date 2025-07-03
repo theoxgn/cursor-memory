@@ -1,0 +1,112 @@
+{
+  "cursor.includeDocs": [
+    ".cursorrules",
+    "project_memory.md",
+    "session_state.json",
+    "rules/auto-memory.mdc",
+    "rules/memory.mdc",
+    "rules/sop.mdc", 
+    "rules/backend_rules.mdc"
+  ],
+
+  "cursor.autoSuggest": true,
+  "cursor.smartSelection": true,
+  
+  "files.exclude": {
+    "**/temp/**": false,
+    "**/archive/**": false,
+    "**/.cursor": false
+  },
+
+  "files.associations": {
+    ".cursorrules": "markdown",
+    "project_memory.md": "markdown",
+    "session_state.json": "json",
+    "*.mdc": "markdown"
+  },
+
+  "editor.rulers": [80, 120],
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.eslint.fixAll": true,
+    "source.fixAll": true
+  },
+
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "javascript.preferences.includePackageJsonAutoImports": "auto",
+
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact", 
+    "typescript",
+    "typescriptreact"
+  ],
+
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+
+  "workbench.startupEditor": "readme",
+  
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    ".cursorrules": "project_memory.md, session_state.json",
+    "project_memory.md": "session_state.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.ts": "${capture}.js, ${capture}.d.ts.map, ${capture}.d.ts, ${capture}.js.map"
+  },
+
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/temp": true,
+    "**/.git": true,
+    "**/dist": true,
+    "**/build": true
+  },
+
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+
+  "markdown.preview.breaks": true,
+  "markdown.preview.linkify": true,
+
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

@@ -1,0 +1,331 @@
+# Cursor Enhanced Memory System
+
+## 🏗️ Backend Development Rules
+**MANDATORY**: All backend development MUST follow the rules defined in `.cursor/rules/backend_rules.mdc`
+
+### Quick Reference:
+- **Architecture**: Node.js/Express with Sequelize ORM
+- **Naming**: snake_case for files, PascalCase for classes
+- **Models**: MT prefix, UUID primary keys, inline associations
+- **Controllers**: Export instantiated classes, use MessageHelper
+- **Services**: Database transactions, ResponseError handling
+- **Validation**: express-validator with sanitization
+- **Authentication**: JWT with authMuatpartsRequired middleware
+- **Testing**: Comprehensive testing standards following Section 18
+
+**⚠️ CRITICAL**: Read `.cursor/rules/backend_rules.mdc` before generating any backend code!
+
+## 🚨 Critical Memory Management
+
+### **File Inclusion Priority (MANDATORY)**
+MUST ALWAYS read these files in order:
+1. project_memory.md (project context)
+2. session_state.json (current session)
+3. .cursorrules (this file)
+4. .cursor/rules/backend_rules.mdc (backend-specific rules - MANDATORY)
+
+## 🔄 Workflow Enforcement
+
+### **🎯 API Implementation Workflow (MANDATORY):**
+**Trigger:** When user says `"implementasi <<path api>>"`
+
+**🚨 ENFORCEMENT PROTOCOL:**
+- **MUST RESPOND:** "Starting API implementation with 6-step verification process..."
+- **MUST SHOW:** Checklist progress for each step
+- **MUST CONFIRM:** Each step completion before proceeding
+- **CANNOT SKIP:** Any step regardless of API complexity
+
+**CRITICAL STEPS (Must be followed in exact order):**
+
+1. **📋 File Inclusion Priority (MANDATORY):**
+   - ✅ Read project_memory.md (project context) → **CONFIRM COMPLETED**
+   - ✅ Read session_state.json (current session) → **CONFIRM COMPLETED**
+   - ✅ Read .cursorrules (this file) → **CONFIRM COMPLETED**
+   - ✅ Read .cursor/rules/backend_rules.mdc (backend-specific rules) → **CONFIRM COMPLETED**
+   - **CHECKPOINT:** All mandatory files read and understood
+
+2. **📄 API CONTRACT INTERPRETATION (CRITICAL):**
+   - ✅ Find API specification in `ai/api_kontrak.md` → **CONFIRM FOUND**
+   - ✅ Read API contract LITERALLY → **QUOTE EXACT SPECIFICATION**
+   - ✅ Store contract details → **LIST: method, path, headers, body, response**
+   - **CHECKPOINT:** Contract interpreted without assumptions, exact specification documented
+
+3. **📚 BUSINESS RULES DISCOVERY:**
+   - ✅ Identify KO references from contract → **LIST FOUND KO REFERENCES**
+   - ✅ Search `ai/rules/` folder → **LIST FOUND RULE FILES**
+   - ✅ Read related rules → **SUMMARIZE KEY BUSINESS LOGIC**
+   - **CHECKPOINT:** Business rules documented and understood
+
+4. **🔍 COMPREHENSIVE VERIFICATION (CRITICAL):**
+   - **📊 MODEL VERIFICATION:**
+     - Read ALL related model files in `src/models/muattrans/`
+     - Verify field names and data types (camelCase vs snake_case)
+     - Check model associations and aliases (`as: 'additionalService'`)
+     - Verify database connections
+     - Read enum files in `src/enums/`
+     - Verify enum keys vs display text
+     - Check enum usage in models and services
+   - **🔗 SERVICE DEPENDENCIES:**
+     - Check existing service imports and patterns
+     - Verify helper imports (MessageHelper, ResponseError)
+     - Check middleware imports (authMuatpartsRequired)
+   - **📁 FILE STRUCTURE COMPLIANCE:**
+     - Verify route structure and mounting points
+     - Check controller/service naming patterns
+     - Validate import paths and file organization
+   - ✅ **VERIFICATION COMPLETE** → **OUTPUT COMPLETE VERIFICATION REPORT**
+   - **CHECKPOINT:** All technical specifications verified and documented
+   - **MANDATORY:** Cannot proceed to implementation without verification report
+
+5. **🏗️ IMPLEMENTATION EXECUTION:**
+   - Follow .cursor/rules/backend_rules.mdc patterns (Route → Controller → Service → Validation)
+   - Implement exactly per API contract specification
+   - Apply business rules from KO documents
+   - Use verified model fields and enum values (from step 4)
+   - Use ORM models with proper field verification
+   - Include proper error handling and transactions
+
+6. **✅ VALIDATION & TESTING:**
+   - **UNIT TESTING (MANDATORY):** Follow comprehensive testing standards
+     - Create comprehensive test suite (Service, Route, Integration, KO Rules)
+     - Use real PostgreSQL models (NOT mocks)
+     - Test with UNITTEST prefix for data isolation
+     - Verify all positive and negative test cases
+     - Test multi-language support and business rules compliance
+   - **SYSTEMATIC DEBUGGING PROTOCOL:**
+     1. Read error message completely
+     2. Trace back to model/enum definition
+     3. Fix ONE error at a time
+     4. Test after each fix
+     5. Document fix in memory
+   - Update memory with lessons learned
+
+**⚠️ CRITICAL COMPLIANCE RULES:**
+- **API Contract is Source of Truth** - NEVER deviate
+- **Literal interpretation** - NO creative additions
+- **Business rules must be applied** from KO documents
+- **Follow backend rules** for implementation patterns
+
+**🚨 MANDATORY ENFORCEMENT:**
+- **CANNOT SKIP STEPS** - Each step must show completion confirmation
+- **CANNOT ASSUME** - Must verify with source files and quote exact findings
+- **CANNOT PROCEED** - Without completing verification report
+- **MUST SHOW PROGRESS** - Checklist completion for each step
+- **MUST QUOTE SOURCES** - API contract, model fields, enum values
+
+**🛡️ FAILURE SAFEGUARDS:**
+- **If skipping step detected** → STOP and restart from step 1
+- **If assumption detected** → STOP and verify with source files
+- **If verification incomplete** → CANNOT proceed to implementation
+- **If error occurs** → Systematic debugging protocol (one error at a time)
+
+### **🧪 Unit Testing Workflow (MANDATORY):**
+**Trigger:** When user asks for unit tests: `"create unit test untuk api [endpoint]"`
+
+**📝 TESTING PROTOCOL:**
+- **MUST RESPOND:** "Creating comprehensive unit test suite following testing standards..."
+- **MUST IMPLEMENT:** All 5 test layers (Service, Route, Integration, KO Business Rules, Security)
+- **MUST USE:** Real PostgreSQL models with existing database connections
+- **MUST FOLLOW:** UNITTEST prefix pattern for test data isolation
+
+**CRITICAL TESTING STEPS (Must be followed in exact order):**
+
+**🔍 PRE-TEST VALIDATION (MANDATORY):**
+1. **📋 Implementation Verification:**
+   - ✅ **Core Dependencies:** Read and understand all require() statements from implementation files
+   - ✅ Verify API sudah fully implemented dan berjalan
+   - ✅ Check database models dan associations sudah benar  
+   - ✅ Verify API contract compliance dengan manual testing
+   - ✅ Confirm business rules sudah terimplementasi
+   - **CHECKPOINT:** Implementation validated before testing
+
+2. **🛠️ Test Environment Setup:**
+   - ✅ Database connection configuration verified
+   - ✅ Test database isolation (separate from dev/prod)
+   - ✅ Required dependencies installation checked
+   - ✅ Environment variables for testing configured
+   - **CHECKPOINT:** Test environment ready
+
+**🧪 CORE TESTING EXECUTION:**
+3. **📋 Test Standards Review:** Read backend rules testing standards
+4. **🏗️ Test Structure Creation:** Create 5 test layers with proper Jest hooks
+5. **🔧 Database Integration:** Use real models with UNITTEST cleanup pattern
+6. **🌐 Language Testing:** Test with valid UUID language IDs (not string codes)
+7. **📊 KO Compliance:** Test all business rules from KO documentation
+
+**🔄 TEST EXECUTION WORKFLOW:**
+8. **Setup Phase** → Database cleanup + test data preparation
+9. **Service Layer** → Test business logic dalam isolasi
+10. **Route Layer** → Test HTTP endpoints dengan supertest
+11. **Integration** → Test end-to-end flow
+12. **KO Compliance** → Test setiap business rule dari KO docs
+13. **Security** → Test attack vectors dan vulnerabilities
+14. **Cleanup Phase** → Verify no test data tersisa
+
+**🚨 FAILURE HANDLING PROTOCOL:**
+15. **Test Failure Analysis:**
+    - ✅ Analyze failure root cause
+    - ✅ Check if implementation vs test mismatch
+    - ✅ Verify database state dan cleanup
+    - ✅ Fix ONE test at a time
+    - ✅ Re-run specific test layer
+    - ✅ Document lesson learned
+    - **CHECKPOINT:** All failures resolved systematically
+
+**⚡ PERFORMANCE TESTING (OPTIONAL):**
+16. **Performance Validation:**
+    - Response time benchmarks (< 200ms for CRUD)
+    - Database query optimization checks
+    - Memory usage monitoring
+    - Concurrent request handling (10+ requests)
+    - **CHECKPOINT:** Performance standards met
+
+17. **✅ Final Verification:** Run complete test suite and fix any remaining issues
+
+## 🔄 SESSION RECOVERY SYSTEM
+
+### **session_state.json Structure:**
+```json
+{
+  "project_name": "Project Name",
+  "session_id": "session_YYYYMMDD_HHMMSS",
+  "last_updated": "2024-06-24T11:45:00Z",
+  "current_task": {
+    "name": "task_name",
+    "status": "IN_PROGRESS|COMPLETED|FAILED",
+    "progress_percent": 75,
+    "total_steps": 4,
+    "current_step": 2,
+    "can_resume": true,
+    "checkpoint_data": {}
+  },
+  "completed_tasks": [
+    {
+      "name": "previous_task",
+      "status": "COMPLETED",
+      "completion_time": "2024-06-24T11:30:00Z"
+    }
+  ],
+  "next_tasks": ["upcoming_task_1", "upcoming_task_2"]
+}
+```
+
+## 🎯 Code Quality Standards
+
+### **MANDATORY Code Patterns:**
+- **Follow MVC Architecture** with service layer
+- **Use Sequelize ORM** with proper transactions
+- **Implement proper error handling** with ResponseError
+- **Add comprehensive validation** using express-validator
+- **Use JWT authentication** with authMuatpartsRequired
+- **Follow naming conventions** strictly
+- **Include proper logging** and monitoring
+- **Write comprehensive tests** for all layers
+
+### **Security Requirements:**
+- **Input validation** on all endpoints
+- **SQL injection prevention** through ORM
+- **XSS protection** through sanitization
+- **Authentication** on protected routes
+- **Authorization** based on user roles
+- **Rate limiting** on public endpoints
+- **HTTPS** in production
+- **Environment variables** for secrets
+
+### **Performance Standards:**
+- **Database indexing** on queried fields
+- **Query optimization** with proper includes
+- **Pagination** for large datasets
+- **Connection pooling** for database
+- **Caching** for frequently accessed data
+- **Response compression** for APIs
+- **Monitoring** for performance metrics
+
+## 🚨 Critical Rules
+- **NEVER skip reading required files** before implementation
+- **ALWAYS follow the exact workflow steps** for API implementation
+- **ALWAYS use the exact patterns** defined in backend rules
+- **ALWAYS test thoroughly** before completing implementation
+- **NEVER deviate from API contracts** without explicit approval
+- **ALWAYS document implementation decisions** for future reference
+
+## 📋 DEVELOPMENT WORKFLOW
+
+### **BEFORE EVERY TASK:**
+1. Read `project_memory.md` for current context
+2. Check `session_state.json` if present for recovery
+3. **MANDATORY**: Read `.cursor/rules/backend_rules.mdc` for backend development standards
+4. Understand active vs deprecated files
+5. Confirm understanding with user
+
+### **DURING DEVELOPMENT:**
+1. Track progress in real-time
+2. Document issues immediately using templates
+3. Create checkpoints for long processes
+4. Follow established patterns and conventions
+5. Update session_state.json with progress
+
+### **AFTER COMPLETION:**
+1. Run comprehensive tests (unit + integration + frontend)
+2. Update project_memory.md with lessons learned
+3. Update session_state.json with final status
+4. Clean up temporary files
+5. Save session state for future recovery
+
+## 📁 FILE ORGANIZATION UNDERSTANDING
+
+### **DIRECTORY STRUCTURE:**
+- `src/` - Main implementation files (CURRENT)
+- `test/` - Testing files (PERMANENT)
+- `docs/` - Documentation (PERMANENT)
+- `temp/` - Temporary files (SAFE TO DELETE)
+- `archive/` - Deprecated files (REFERENCE ONLY)
+
+## 💬 EXPECTED CHAT CONTEXT
+
+### **PROPER SESSION STARTER:**
+```
+[PROJECT_NAME] Development Session
+
+CONTEXT LOADING:
+1. Read project_memory.md for current status
+2. Read session_state.json if exists
+3. Review ai_comprehensive_sop_system.md protocols
+
+TASK: [DESCRIBE TASK]
+
+IMPORTANT: Confirm understanding before proceeding.
+```
+
+## 📞 QUICK REFERENCE
+
+### **FILES TO ALWAYS CHECK:**
+- `project_memory.md` - Project context and history
+- `.cursor/rules/backend_rules.mdc` - Backend development standards (MANDATORY)
+- `ai_comprehensive_sop_system.md` - Development protocols
+- `session_state.json` - Recovery state and current progress
+
+### **TESTING COMMAND REFERENCE:**
+```bash
+# Run all tests before declaring complete
+npm test                 # or appropriate test command
+npm run lint            # code quality validation
+npm run typecheck       # type validation
+npm run build           # build verification
+npm run e2e             # end-to-end tests
+```
+
+### **MEMORY UPDATE CHECKLIST:**
+**After completing ANY development task:**
+- [ ] Open `project_memory.md` and add findings using templates
+- [ ] Open `session_state.json` and update progress
+- [ ] Update current status in both files
+- [ ] Save both files with current timestamp
+- [ ] Mark completed tasks and plan next steps
+- [ ] Confirm both memory and session state are accurate
+
+---
+
+**Status:** Enhanced Cursor Rules System
+**Version:** 1.0 (Cursor Compatible)
+**Auto Level:** Enforced Workflow with Verification

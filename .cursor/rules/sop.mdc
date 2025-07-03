@@ -1,0 +1,93 @@
+---
+description: AI Comprehensive SOP System
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# 🤖 AI COMPREHENSIVE SOP SYSTEM
+
+## 🔄 SESSION RECOVERY SYSTEM
+
+### **CORE PRINCIPLE:**
+Any process can be safely interrupted and continued from exact checkpoint with zero data loss.
+
+### **session_state.json Structure:**
+```json
+{
+  "project_name": "Project Name",
+  "session_id": "unique_session_id",
+  "current_command": {
+    "name": "command_name",
+    "total_steps": 4,
+    "current_step": 2,
+    "can_resume": true,
+    "checkpoint_data": {}
+  },
+  "steps": [
+    {
+      "step_number": 1,
+      "name": "Initialize System",
+      "status": "COMPLETED"
+    }
+  ]
+}
+```
+
+## 🧪 TESTING PROTOCOLS
+
+### **CRITICAL PRINCIPLE:**
+**NEVER declare project "ready" without comprehensive testing across all layers.**
+
+### **TESTING PHASES:**
+
+#### **PHASE 1: WHITEBOX TESTING**
+- [ ] **Unit Testing:** All functions tested individually
+- [ ] **Integration Testing:** Components work together
+- [ ] **Code Coverage:** Minimum 80% coverage
+- [ ] **Performance:** Benchmarks met
+
+#### **PHASE 2: BLACKBOX TESTING**
+- [ ] **Functional Testing:** Business logic correct
+- [ ] **Input Validation:** Various input formats tested
+- [ ] **Error Handling:** Graceful error handling
+- [ ] **End-to-End:** Complete workflows tested
+
+#### **PHASE 3: FRONTEND TESTING**
+- [ ] **Cross-browser:** Works on all browsers
+- [ ] **Responsive:** Works on all devices
+- [ ] **Accessibility:** WCAG compliance
+- [ ] **User Experience:** Intuitive interface
+
+### **DEPLOYMENT BLOCKERS:**
+- ❌ Any test failure
+- ❌ Performance degradation
+- ❌ New errors in logs
+- ❌ User workflow breaks
+- ❌ Security vulnerabilities
+
+## 📝 MEMORY MAINTENANCE
+
+### **MEMORY UPDATE WORKFLOW:**
+1. **Before Session:** Read `project_memory.md`
+2. **During Session:** Document in real-time
+3. **After Session:** Update memory with findings
+
+### **FILE ORGANIZATION:**
+- `src/` - Main implementation (CURRENT)
+- `test/` - Testing files (PERMANENT)
+- `temp/` - Temporary files (SAFE TO DELETE)
+- `archive/` - Deprecated files (REFERENCE ONLY)
+
+## 🚨 CRITICAL RULES
+
+### **NEVER DO:**
+- ❌ Skip reading project_memory.md
+- ❌ Declare project ready without testing
+- ❌ Skip memory updates after completion
+- ❌ Deploy without running all test suites
+
+### **ALWAYS DO:**
+- ✅ Load project context first
+- ✅ Follow systematic testing approach
+- ✅ Update memory after each session
+- ✅ Maintain quality gates
