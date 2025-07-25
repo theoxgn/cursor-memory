@@ -1,0 +1,281 @@
+---
+alwaysApply: true
+---
+
+# Code Update Rules 
+
+## 🎯 Code Update Commands
+
+### Basic Commands:
+- `update code [description]` - Update existing code
+- `improve [endpoint/feature]` - Enhance functionality  
+- `fix [issue]` - Bug fixes
+- `refactor [component]` - Code restructuring
+
+## 📝 Standard Update Process
+
+**🚨 ENFORCEMENT PROTOCOL (MANDATORY):**
+- **MUST RESPOND:** "Starting code update with 4-step process..."
+- **MUST SHOW:** Checklist progress for each step
+- **MUST CONFIRM:** Each step completion before proceeding
+- **CANNOT SKIP:** Any step regardless of update complexity
+
+**CRITICAL STEPS (Must be followed in exact order) (MANDATORY):**
+
+### 1. Analyze Current Code
+- ✅ Identify specific functionality to update → **CONFIRM COMPLETED**
+- ✅ Read all related files (route, controller, service, model, enum, test) for that functionality → **CONFIRM COMPLETED**
+- ✅ Identify what needs to be changed → **CONFIRM COMPLETED**
+- **CHECKPOINT:** Current state fully understood
+- ✅ **ASK USER CONFIRMATION:** "Ready to proceed to Step 2: Make Changes?" → **WAIT FOR USER APPROVAL**
+
+### 2. Make Changes
+- ✅ **CREATE BACKUP FILES FIRST:** Create .backup copy of each file before modification → **CONFIRM COMPLETED**
+- ✅ Determine which files need changes based on step 1 analysis → **CONFIRM COMPLETED**
+- ✅ List specific files to be modified with reasons → **CONFIRM COMPLETED**
+- ✅ Update model files if needed (add/modify fields, associations, validations) → **CONFIRM COMPLETED**
+- ✅ Update enum files if needed (add new values, modify existing) → **CONFIRM COMPLETED**
+- ✅ Update service files if needed (modify business logic, add new methods) → **CONFIRM COMPLETED**
+- ✅ Update controller files if needed (modify endpoints, add validation, error handling) → **CONFIRM COMPLETED**
+- ✅ Update route files if needed (add/modify routes, middleware) → **CONFIRM COMPLETED**
+- ✅ Follow existing code patterns and conventions throughout → **CONFIRM COMPLETED**
+- ✅ Ensure backward compatibility when possible → **CONFIRM COMPLETED**
+- **CHECKPOINT:** Only necessary changes implemented following proper dependency order
+- ✅ **ASK USER SATISFACTION:** "Are you satisfied with these changes? (Yes/No/Need modifications)" → **WAIT FOR USER RESPONSE**
+- ✅ **IF NOT SATISFIED:** Continue making modifications based on user feedback → **REPEAT UNTIL SATISFIED**
+- ✅ **TRACK MODIFICATION COUNT:** Keep count of modification attempts → **CONFIRM COMPLETED**
+- ✅ **ASK USER CONFIRMATION:** "Ready to proceed to Step 3: Test Changes?" → **WAIT FOR USER APPROVAL**
+
+### 3. Test Changes
+- ✅ Run existing tests to ensure no regressions → **CONFIRM COMPLETED**
+- ✅ Add new tests for new functionality → **CONFIRM COMPLETED**
+- ✅ Verify the changes work as expected → **CONFIRM COMPLETED**
+- **CHECKPOINT:** All testing validated
+- ✅ **ASK USER CONFIRMATION:** "Ready to proceed to Step 4: Document Changes?" → **WAIT FOR USER APPROVAL**
+
+### 4. Document Changes
+- ✅ Update comments and documentation if needed → **CONFIRM COMPLETED**
+- ✅ Keep track of what was modified → **CONFIRM COMPLETED**
+- **CHECKPOINT:** Documentation updated and complete
+
+## 🔄 ITERATIVE MODIFICATION PROTOCOL
+
+### PHASE 1: BACKUP CREATION (MANDATORY)
+- ✅ Before ANY file modification, create backup with .backup extension → **CONFIRM COMPLETED**
+- ✅ Example: `OrderController.js` becomes `OrderController.js.backup` → **CONFIRM COMPLETED**
+- ✅ Track all backup files created → **CONFIRM COMPLETED**
+
+### PHASE 2: MODIFICATION CYCLE
+- ✅ Make requested code changes → **CONFIRM COMPLETED**
+- ✅ Increment modification counter (start from 1) → **CONFIRM COMPLETED**
+- ✅ **MANDATORY ASK:** "Are you satisfied with these changes? (Yes/Continue modifying)" → **WAIT FOR USER RESPONSE**
+- ✅ **IF Continue:** Go back to modification step → **REPEAT CYCLE**
+- ✅ **IF Yes:** Proceed to next step in main workflow → **CONTINUE**
+
+### PHASE 3: 5-ATTEMPT CHECKPOINT (AUTOMATIC)
+- ✅ **WHEN COUNTER = 5, 10, 15, 20...** MANDATORY show this exact message:
+  ```
+  🚨 MODIFICATION CHECKPOINT (Attempt #X)
+  
+  You've requested X modifications. Choose an option:
+  
+  1. 🔄 RESTORE - Return all files to original state (.backup)
+  2. ✅ CONTINUE - Keep current changes and continue modifying
+  
+  Type "1" for RESTORE or "2" for CONTINUE:
+  ```
+- ✅ **WAIT FOR USER CHOICE** (1 or 2) → **MANDATORY USER INPUT**
+- ✅ **IF Choice = 1:** Execute restore protocol → **RESTORE ALL FILES FROM .backup**
+- ✅ **IF Choice = 2:** Reset counter to 0, continue modifications → **CONTINUE CYCLE**
+
+### PHASE 4: RESTORE PROTOCOL (IF TRIGGERED)
+- ✅ Read each .backup file → **CONFIRM COMPLETED**
+- ✅ Copy .backup content to original file → **CONFIRM COMPLETED**
+- ✅ Verify restoration successful → **CONFIRM COMPLETED**
+- ✅ **CONFIRM TO USER:** "All files restored to original state" → **CONFIRM COMPLETED**
+- ✅ **ASK:** "Ready to start fresh modifications?" → **WAIT FOR USER RESPONSE**
+
+## 🔄 Simple Update Template
+
+When making code updates, use this approach:
+
+```
+**WHAT CHANGED:**
+- [Brief description of changes made]
+
+**FILES MODIFIED:**
+- [List of files that were updated]
+
+**TESTING:**
+- [What tests were run or added]
+
+**NOTES:**
+- [Any important details or considerations]
+```
+
+## ⚠️ CRITICAL COMPLIANCE RULES
+- **Literal interpretation** - NO creative additions
+- **Business rules must be applied** from project documentation
+- **Follow existing patterns** for implementation
+- **CANNOT SKIP STEPS** - Each step must show completion confirmation
+- **CANNOT ASSUME** - Must verify with source files and quote exact findings
+- **CANNOT PROCEED** - Without completing verification report
+- **MUST SHOW PROGRESS** - Checklist completion for each step
+
+## 🛡️ FAILURE SAFEGUARDS
+- **If skipping step detected** → STOP and restart from step 1
+- **If assumption detected** → STOP and verify with source files
+- **If verification incomplete** → CANNOT proceed to implementation
+- **If error occurs** → Systematic debugging protocol (one error at a time)
+
+## 🚨 Important Rules
+- Always read existing code before making changes
+- Follow the project's existing patterns and conventions
+- Test your changes before considering them complete
+- Keep updates focused and avoid unnecessary changes
+- Document significant modifications
+- Create backups before any file modification
+- Wait for user confirmation at each checkpoint
+
+---
+
+**Version:** Code Update Rules v1.0
+**Purpose:** Systematic code update guidance with mandatory verification steps# Code Update Rules - Based on CLAUDE_UPDATE_RULES.md
+
+## 🎯 Code Update Commands
+
+### Basic Commands:
+- `update code [description]` - Update existing code
+- `improve [endpoint/feature]` - Enhance functionality  
+- `fix [issue]` - Bug fixes
+- `refactor [component]` - Code restructuring
+
+## 📝 Standard Update Process
+
+**🚨 ENFORCEMENT PROTOCOL (MANDATORY):**
+- **MUST RESPOND:** "Starting code update with 4-step process..."
+- **MUST SHOW:** Checklist progress for each step
+- **MUST CONFIRM:** Each step completion before proceeding
+- **CANNOT SKIP:** Any step regardless of update complexity
+
+**CRITICAL STEPS (Must be followed in exact order) (MANDATORY):**
+
+### 1. Analyze Current Code
+- ✅ Identify specific functionality to update → **CONFIRM COMPLETED**
+- ✅ Read all related files (route, controller, service, model, enum, test) for that functionality → **CONFIRM COMPLETED**
+- ✅ Identify what needs to be changed → **CONFIRM COMPLETED**
+- **CHECKPOINT:** Current state fully understood
+- ✅ **ASK USER CONFIRMATION:** "Ready to proceed to Step 2: Make Changes?" → **WAIT FOR USER APPROVAL**
+
+### 2. Make Changes
+- ✅ **CREATE BACKUP FILES FIRST:** Create .backup copy of each file before modification → **CONFIRM COMPLETED**
+- ✅ Determine which files need changes based on step 1 analysis → **CONFIRM COMPLETED**
+- ✅ List specific files to be modified with reasons → **CONFIRM COMPLETED**
+- ✅ Update model files if needed (add/modify fields, associations, validations) → **CONFIRM COMPLETED**
+- ✅ Update enum files if needed (add new values, modify existing) → **CONFIRM COMPLETED**
+- ✅ Update service files if needed (modify business logic, add new methods) → **CONFIRM COMPLETED**
+- ✅ Update controller files if needed (modify endpoints, add validation, error handling) → **CONFIRM COMPLETED**
+- ✅ Update route files if needed (add/modify routes, middleware) → **CONFIRM COMPLETED**
+- ✅ Follow existing code patterns and conventions throughout → **CONFIRM COMPLETED**
+- ✅ Ensure backward compatibility when possible → **CONFIRM COMPLETED**
+- **CHECKPOINT:** Only necessary changes implemented following proper dependency order
+- ✅ **ASK USER SATISFACTION:** "Are you satisfied with these changes? (Yes/No/Need modifications)" → **WAIT FOR USER RESPONSE**
+- ✅ **IF NOT SATISFIED:** Continue making modifications based on user feedback → **REPEAT UNTIL SATISFIED**
+- ✅ **TRACK MODIFICATION COUNT:** Keep count of modification attempts → **CONFIRM COMPLETED**
+- ✅ **ASK USER CONFIRMATION:** "Ready to proceed to Step 3: Test Changes?" → **WAIT FOR USER APPROVAL**
+
+### 3. Test Changes
+- ✅ Run existing tests to ensure no regressions → **CONFIRM COMPLETED**
+- ✅ Add new tests for new functionality → **CONFIRM COMPLETED**
+- ✅ Verify the changes work as expected → **CONFIRM COMPLETED**
+- **CHECKPOINT:** All testing validated
+- ✅ **ASK USER CONFIRMATION:** "Ready to proceed to Step 4: Document Changes?" → **WAIT FOR USER APPROVAL**
+
+### 4. Document Changes
+- ✅ Update comments and documentation if needed → **CONFIRM COMPLETED**
+- ✅ Keep track of what was modified → **CONFIRM COMPLETED**
+- **CHECKPOINT:** Documentation updated and complete
+
+## 🔄 ITERATIVE MODIFICATION PROTOCOL
+
+### PHASE 1: BACKUP CREATION (MANDATORY)
+- ✅ Before ANY file modification, create backup with .backup extension → **CONFIRM COMPLETED**
+- ✅ Example: `OrderController.js` becomes `OrderController.js.backup` → **CONFIRM COMPLETED**
+- ✅ Track all backup files created → **CONFIRM COMPLETED**
+
+### PHASE 2: MODIFICATION CYCLE
+- ✅ Make requested code changes → **CONFIRM COMPLETED**
+- ✅ Increment modification counter (start from 1) → **CONFIRM COMPLETED**
+- ✅ **MANDATORY ASK:** "Are you satisfied with these changes? (Yes/Continue modifying)" → **WAIT FOR USER RESPONSE**
+- ✅ **IF Continue:** Go back to modification step → **REPEAT CYCLE**
+- ✅ **IF Yes:** Proceed to next step in main workflow → **CONTINUE**
+
+### PHASE 3: 5-ATTEMPT CHECKPOINT (AUTOMATIC)
+- ✅ **WHEN COUNTER = 5, 10, 15, 20...** MANDATORY show this exact message:
+  ```
+  🚨 MODIFICATION CHECKPOINT (Attempt #X)
+  
+  You've requested X modifications. Choose an option:
+  
+  1. 🔄 RESTORE - Return all files to original state (.backup)
+  2. ✅ CONTINUE - Keep current changes and continue modifying
+  
+  Type "1" for RESTORE or "2" for CONTINUE:
+  ```
+- ✅ **WAIT FOR USER CHOICE** (1 or 2) → **MANDATORY USER INPUT**
+- ✅ **IF Choice = 1:** Execute restore protocol → **RESTORE ALL FILES FROM .backup**
+- ✅ **IF Choice = 2:** Reset counter to 0, continue modifications → **CONTINUE CYCLE**
+
+### PHASE 4: RESTORE PROTOCOL (IF TRIGGERED)
+- ✅ Read each .backup file → **CONFIRM COMPLETED**
+- ✅ Copy .backup content to original file → **CONFIRM COMPLETED**
+- ✅ Verify restoration successful → **CONFIRM COMPLETED**
+- ✅ **CONFIRM TO USER:** "All files restored to original state" → **CONFIRM COMPLETED**
+- ✅ **ASK:** "Ready to start fresh modifications?" → **WAIT FOR USER RESPONSE**
+
+## 🔄 Simple Update Template
+
+When making code updates, use this approach:
+
+```
+**WHAT CHANGED:**
+- [Brief description of changes made]
+
+**FILES MODIFIED:**
+- [List of files that were updated]
+
+**TESTING:**
+- [What tests were run or added]
+
+**NOTES:**
+- [Any important details or considerations]
+```
+
+## ⚠️ CRITICAL COMPLIANCE RULES
+- **Literal interpretation** - NO creative additions
+- **Business rules must be applied** from project documentation
+- **Follow existing patterns** for implementation
+- **CANNOT SKIP STEPS** - Each step must show completion confirmation
+- **CANNOT ASSUME** - Must verify with source files and quote exact findings
+- **CANNOT PROCEED** - Without completing verification report
+- **MUST SHOW PROGRESS** - Checklist completion for each step
+
+## 🛡️ FAILURE SAFEGUARDS
+- **If skipping step detected** → STOP and restart from step 1
+- **If assumption detected** → STOP and verify with source files
+- **If verification incomplete** → CANNOT proceed to implementation
+- **If error occurs** → Systematic debugging protocol (one error at a time)
+
+## 🚨 Important Rules
+- Always read existing code before making changes
+- Follow the project's existing patterns and conventions
+- Test your changes before considering them complete
+- Keep updates focused and avoid unnecessary changes
+- Document significant modifications
+- Create backups before any file modification
+- Wait for user confirmation at each checkpoint
+
+---
+
+**Version:** Code Update Rules v1.0
+**Purpose:** Systematic code update guidance with mandatory verification steps

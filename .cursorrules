@@ -15,6 +15,17 @@
 
 **⚠️ CRITICAL**: Read `.cursor/rules/backend_rules.mdc` before generating any backend code!
 
+## 🔄 Code Update Rules
+**MANDATORY**: All code updates MUST follow the rules defined in `.cursor/rules/update_code_rules.md`
+
+### Update Commands:
+- `update code [description]` - Update existing code with 4-step process
+- `improve [endpoint/feature]` - Enhance functionality systematically
+- `fix [issue]` - Bug fixes with proper verification
+- `refactor [component]` - Code restructuring with backup creation
+
+**⚠️ CRITICAL**: Read `.cursor/rules/update_code_rules.md` before making any code changes!
+
 ## 🚨 Critical Memory Management
 
 ### **File Inclusion Priority (MANDATORY)**
@@ -23,6 +34,7 @@ MUST ALWAYS read these files in order:
 2. session_state.json (current session)
 3. .cursorrules (this file)
 4. .cursor/rules/backend_rules.mdc (backend-specific rules - MANDATORY)
+5. .cursor/rules/update_code_rules.md (code update rules - MANDATORY for updates)
 
 ## 🔄 Workflow Enforcement
 
@@ -118,6 +130,29 @@ MUST ALWAYS read these files in order:
 - **If assumption detected** → STOP and verify with source files
 - **If verification incomplete** → CANNOT proceed to implementation
 - **If error occurs** → Systematic debugging protocol (one error at a time)
+
+### **🔄 Code Update/Improvement Workflow (MANDATORY):**
+**Trigger:** When user says `"update code [description]"` or `"improve [endpoint/feature]" ` or `fix [issue]` or refactor `[component]`
+
+**📋 REFERENCE:** Follow detailed workflow in `.cursor/rules/update_code_rules.mdc`
+
+**🚨 ENFORCEMENT PROTOCOL (MANDATORY):**
+- **MUST RESPOND:** "Starting code update with 4-step process..."
+- **MUST SHOW:** Checklist progress for each step
+- **MUST CONFIRM:** Each step completion before proceeding
+- **CANNOT SKIP:** Any step regardless of update complexity
+
+**CRITICAL STEPS (Must be followed in exact order) (MANDATORY):**
+1. **Analyze Current Code** → User confirmation required
+2. **Make Changes** (with backup + iterative satisfaction check) → User confirmation required  
+3. **Test Changes** → User confirmation required
+4. **Document Changes** → Complete
+
+**🔄 ITERATIVE MODIFICATION PROTOCOL (MANDATORY):**
+- **BACKUP REQUIREMENT:** ALWAYS create .backup files before ANY code modification
+- **SATISFACTION CHECK:** After each modification, ask user satisfaction
+- **5-ATTEMPT CYCLE:** Every 5th modification attempt, offer restore or continue options
+- **RESTORE PROTOCOL:** Option to restore from .backup files if needed
 
 ### **🧪 Unit Testing Workflow (MANDATORY):**
 **Trigger:** When user asks for unit tests: `"create unit test untuk api [endpoint]"`
@@ -302,6 +337,7 @@ IMPORTANT: Confirm understanding before proceeding.
 ### **FILES TO ALWAYS CHECK:**
 - `project_memory.md` - Project context and history
 - `.cursor/rules/backend_rules.mdc` - Backend development standards (MANDATORY)
+- `.cursor/rules/update_code_rules.md` - Code update standards (MANDATORY)
 - `ai_comprehensive_sop_system.md` - Development protocols
 - `session_state.json` - Recovery state and current progress
 
